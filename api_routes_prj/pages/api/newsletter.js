@@ -3,7 +3,8 @@ function handler(req, res) {
         const userEmail = req.body.email;
 
         if (!userEmail || !userEmail.includes("@")) {
-            return res.status(422).json({ message: "Invalid email address" });
+            res.status(422).json({ message: "Invalid email address" });
+            return;
         }
 
         console.log(userEmail);
