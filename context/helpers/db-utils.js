@@ -13,6 +13,8 @@ export async function insertDocument(client, collection, document) {
 
     const result = await db.collection(collection).insertOne(document);
 
+    console.log(result);
+
     return result;
 }
 
